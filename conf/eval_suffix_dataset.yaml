@@ -1,0 +1,11 @@
+defaults:
+  - base
+  - _self_
+
+mode: eval_suffix_dataset
+
+eval:
+  batch_size: 8
+  suffix_dataset_pth_dct:
+    suffixes_eval_1: "/data/Newdisk/jiachengyu/jcy_project/Kaggle/advprompter/exp/local/2025.08.25/1458/suffix_dataset/validation_0.csv" # path to csv, should contain columns 'instruct', 'target', 'suffix', 'full_instruct'
+    # suffixes_eval_2: ...

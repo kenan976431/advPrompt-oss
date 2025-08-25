@@ -1,0 +1,10 @@
+llm_params:
+  device: 'cuda:1'
+  freeze: true
+  # dtype: float16
+  dtype: bfloat16
+  lora_params: null
+allow_non_ascii: true
+gen_params:
+  max_new_tokens: 512
+  do_sample: false

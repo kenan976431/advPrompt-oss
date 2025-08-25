@@ -1,0 +1,19 @@
+defaults:
+  - base_target_llm
+  - _self_
+
+llm_params:
+  model_name: "gpt-oss-20b-base"
+  # checkpoint local DIR
+  checkpoint: "jxm/gpt-oss-20b-base"
+prompt_manager:
+  prompt_template:
+    - key: system_message
+      # msg: "<s>[INST] <<SYS>>\nThis is a system message.\n<</SYS>>\n\n"
+      msg: "<s>[INST]"
+    - key: full_instruct
+      msg: "{full_instruct}"  # loaded from context
+    - key: separator
+      msg: "[/INST]"
+    - key: target
+      msg: "{target}"  # loaded from context
